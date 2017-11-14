@@ -1,0 +1,329 @@
+/* Color Palette
+#2B2D42 - dark blue
+#8D99AE - light blue
+#EDF2F4 - blue/white
+#EF233C - red
+*/
+
+/* Global styles
+-------------------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background: linear-gradient(rgba(141,153,174,0.4), rgba(141,153,174,0.4)),
+              url(../images/background.jpg) no-repeat fixed;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1, h2 {
+  font-family: 'Anton', sans-serif;
+}
+h1 {
+  font-size: 80px;
+  text-align: center;
+}
+h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+h3 {
+  margin: 0;
+}
+a {
+  color :#2EAAE1;
+  text-decoration: none;
+  transition: font-size 0.3s ease-out;
+}
+a:hover {
+  color:#DCF0FA;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 50px;
+  overflow: hidden;
+  color: #EDF2F4;
+}
+
+.col-narrow {
+  /*width: 30%;*/
+  /*float: left;*/
+}
+.col-narrow p{
+  text-align: right;
+}
+
+.col-wide {
+  /*width: 70%;*/
+  /*float: left;*/
+  padding: 10px;
+  font-size: 700;
+  text-align: justify;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  text-align: none;
+  color: #EDF2F4;;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Header and Footer
+-------------------------*/
+header, footer {
+  color: #8D99AE;
+}
+/* header */
+header{
+  padding-top: 50px;
+  position: relative;
+}
+
+header .col-wide {
+  width: 90%;
+  float: none;
+  margin: 0 auto;
+  position: relative;
+}
+header h1, header h2 {
+  color: #EDF2F4;
+}
+.profile-img {
+  border-radius: 50%;
+}
+
+header .content-wrap{
+  position: relative;
+  padding: 40px 20px;
+}
+
+header h1{
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+}
+
+header h1:hover {
+  cursor:pointer;
+}
+
+#seagull  {
+  position: absolute;
+  /*width: 200px;*/
+  animation: myanim 1s;
+  /*z-index: 100;*/
+  /*opacity: 0;*/
+  left: 40px;
+  top: 60px;
+}
+
+
+@keyframes myanim{
+  0%{left: -200px;
+      top: -200px}
+  25%{left: -140px;
+      top: -135px}
+  50%{left: -80px;
+      top: -70px}
+  75%{left: -20px;
+      top: -5px}
+  100%{left: 40px;
+      top: 60px}   
+}
+
+.download{
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  text-decoration: none;
+  font-weight: 700;
+  /*background-color: #08408E;*/
+}
+/* footer */
+footer {
+  text-align: center;
+  color: #000000;
+  font-weight: 500; 
+}
+
+footer .content-wrap{
+  padding-bottom: 10px; 
+}
+footer p{
+  font-size: 10px;
+  margin: 50px 0 10px;
+}
+
+footer h2{
+  margin: 10px;
+  color: #2EAAE1;
+}
+
+
+footer a:hover{
+  background: linear-gradient(rgba(141,153,174,0.4), rgba(141,153,174,0.4));
+  color: #2EAAE1;
+  /*font-weight: 700;*/
+  /*font-size: 20px;*/
+}
+
+.contact-info a {
+  margin: 0 40px;
+  padding: 10px;
+  display: inline-block;
+  /*color: #333333;*/
+}
+
+.contact-info {
+   height: 30px;
+}
+
+/* Navigation*/
+nav {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top:0;
+  z-index: 100;
+  background:rgba(255,255,255,0.3);
+}
+
+nav a{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2EAAE1;
+  padding: 10px;
+}
+
+
+nav a:hover {
+  /*background: #FFE81C;*/
+  color: #4899EA;
+  font-size: 1000;
+  opacity: 1;
+  background:rgba(255,255,255,0.8);
+}
+
+/* Work Experience
+-------------------------*/
+.projects {
+  /*background: #EDF2F4;*/
+}
+
+h3 ~ p {
+  margin: 0;
+}
+
+.projects-description{
+  margin-bottom: 25px;
+}
+
+.projects-description p:first-of-type{
+  margin-top: 0;
+}
+
+.projects ul{
+  margin: 0 0 20px;
+}
+
+/*Work*/
+/*--------------------*/
+.work {
+/*background-color: #E63946;*/
+}
+.work ul{
+  margin: 0 0 20px;
+}
+
+/* Education
+-------------------------*/
+.education {
+  
+}
+
+p + h3 {
+  margin-top: 30px; 
+}
+
+/*Media Queries*/
+@media (min-width: 900px){
+  .col-narrow {
+   width: 30%;
+   float: left;
+  }
+  .col-wide {
+    width: 70%;
+    float: left;
+    padding: 0 0 0 20px; 
+
+  }
+  ul{
+    padding: 0 0 0 30px;
+  }
+}
+
+@media (max-width: 899px){
+  header {
+    text-align: center;
+  }
+  .profile-img {
+    width: 200px;
+  }
+  header h1, header h2{
+    font-size: 40px;
+  }
+  header nav a{
+    font-size: 5px;
+    padding: 5px;
+  }
+  header nav a:hover{
+    font-size: 5px;
+    padding: 5px;
+  }
+
+  .contact-info a {
+    font-size: 5px;
+    padding: 5px;
+    margin: 0 0 15px;  
+  }
+
+  footer p {
+    font-size: 2px;
+    margin: 10px;
+  }
+
+  footer h2 {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  #seagull {
+    width: 100px;
+  }
+
+  .content-wrap {
+    font-size: 15px;
+  }
+}

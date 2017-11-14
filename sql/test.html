@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<script src = "jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<select name="" id="">
+			<option value="">上海</option>
+			<option value="">北京</option>
+			<option value="">江西</option>
+		</select>
+		<form action="" method = "post">
+			<input type="text" placeholder = "" name = "password"/>
+			<input type="text" placeholder ="密码" name = "password"/>
+			<button type="submit"> 登陆</button>
+		</form>
+		<h1>abcbdde</h1>
+		<h2>546456565</h2>
+		<button>点我</button>
+	</body>
+	<script>
+		// $(document).ready(function() {
+		// });
+		$('h1').css('color', 'red');
+		$('button').mouseenter(function(event){
+			$(this).text("来了");
+		})
+		$('button').mouseleave(function(event){
+			$(this).text("走了");
+		})
+		$('button').click(function(event) {
+			$('h1').fadeOut('400', function() {
+				$('h2').animate({
+					top: 100},
+					5000, function() {
+						$('h2').css('color', 'green');
+					/* stuff to do after animation is complete */
+				});
+			});
+			/* Act on the event */
+		});
+		$.ajax({
+			url: '/path/to/file',
+			type: 'default GET (Other values: POST)',
+			dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+			data: {param1: 'value1'},
+		})
+		.done(function() {
+			console.log("success");
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+		
+	</script>
+</html>
