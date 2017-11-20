@@ -1,0 +1,192 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+	background: url("../images/bg_header.jpg") no-repeat fixed;
+	background-size: cover;
+	margin: 0;
+ 	padding: 0;
+ 	font-family: 'Montserrat', sans-serif;
+	/*background-size: no-repeat;*/
+}
+header{
+	overflow: hidden;
+	position: relative;
+}
+
+.introduce {
+	display: block;
+	z-index: 100;
+}
+
+.introduce a:hover{
+	font-size: 80px;
+}
+
+header p{
+	position: fixed;
+	display: inline-block;
+	background: radial-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.1),rgba(255,255,255,0.8));
+	border-radius: 50%;
+	z-index: -1;
+}
+
+section {
+	text-align: center;
+	width: 95%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+main {
+	background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.2))
+}
+
+/*********header*******/
+header a{
+	text-decoration: none;
+	display: block;
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	font-weight: 700;
+	font-family: 'Oswald', sans-serif;
+	opacity: 0;
+	transition: opacity 3s;
+	transition: font-size 1s;
+}
+
+/************project***********/
+.project{
+	/*background-color: rgba(191,219,247,0.6);;*/
+	width: 31%;
+	margin: 1%;
+	display: inline-block;
+	padding: 0 0 100px;
+	overflow: hidden;
+	vertical-align: top;
+
+}
+
+.project .description {
+	background-color: rgba(191,219,247,0.6);
+	height: 300px;
+	padding: 10px;
+	margin: 0;
+	cursor: pointer;
+	text-align: left;
+}
+
+.projects{
+	padding: 20px 0 200px;
+}
+
+.project h1 {
+	margin: 8px 10px; 
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.project p {
+	padding: 15px;
+}
+
+.project img {
+	width: 100%;
+	transition: all 0.6s;
+	vertical-align: bottom;
+}
+
+.project img:hover{
+	transform: scale(1.2);
+}
+
+.img {
+ 	width: 100%;
+ 	overflow: hidden;
+
+}
+.name {
+	position: relative;
+	left: -300px;
+	transition: left 1s;
+	margin: 0;
+	/*display: none;*/
+}
+
+.img a {
+	/*display: inline-block;*/
+}
+
+.name:hover{
+	background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.2));
+	cursor: pointer;
+}
+
+footer {
+	background-color: rgba(15,59,86,0.9);
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+.contact-info {
+	margin: 40px 0 0;
+  	padding: 5px;
+  	display: inline-block;
+  	font-size: 20px;
+}
+
+footer a {
+	padding: 0 20px;
+	font-size: 700;
+	color: white;
+	text-decoration: none;
+}
+
+footer p {
+	font-size: 15px;
+ 	margin: 50px 0 20px;
+}
+
+@media (max-width: 799px) {
+	.projects{
+		margin: 0 10px;
+		padding: 20px 0 100px;
+		text-align: center;
+	}
+	.project{
+		width:100%;
+		padding: 10px;
+	}
+
+	.project .description{
+		text-align: left;
+		height: auto;
+		margin: 0;
+	}
+
+	.description p{
+		margin: 0;
+		padding: 0 10px;
+	}
+
+	header a{
+		font-size: 50px;
+	}
+
+	.introduce a:hover{
+	font-size: 60px;
+	}
+
+	footer a{
+		font-size: 15px;
+		padding: 0 5px;
+	}
+}
